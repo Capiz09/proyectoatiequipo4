@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto ATI - Página Videojuegos con Webpack, Barba y modo-Offline </title>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/cfe24ae6ca.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body data-barba="wrapper">
+    <header class="header">
+      <nav class="nav">
+        <div class="datos-content">
+
+          <form class="forma" method="post">
+            <div class="email">
+              <label class="login">email</label> <input class="login" type="email" id="email">
+            </div>
+            <div class="pass">
+              <label class="login">password</label> <input class="login" type="password" id="password">
+            </div>
+            <span class="etiqueta" id="etiqueta-usuario">
+              Usuario
+            </span>
+            <button class="login" id="solicitar">
+              Sign in
+            </button>
+          </form>
+        </div>
+        <div class="container_menu">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+        <ul class="nav_links">
+          <a href="./index.html">
+            <li class="urls" id="index">Inicio</li>
+          </a>
+          <a href="./galeria.html">
+            <li class="urls" id="galeria">Arte</li>
+          </a>
+          <a href="./proyectos.html">
+            <li class="urls" id="proyectos">Videos</li>
+          </a>
+        </ul>
+      </nav>
+    </header>
+    <main data-barba="container" data-barba-namespace="home">
+      <section class="home">
+        <div class="titular">
+          <h2 class="letrero">
+            Bienvenidos
+          </h2>
+          <div class="blink"></div>
+        </div>
+        <div class="home-content">
+          <div class="videojuegos-content">
+            <button id="mostrar-juego">
+              Mostrar juego
+            </button>
+            <table class="tabla" id="tabla-0">
+              <thead>
+                <tr>
+                  <th colspan="3">Titulo del Videojuego</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr id="imagen">
+                  <td id="respImagen" colspan="3">Imagen</td>
+                </tr>
+                <tr>
+                  <td class="footer" colspan="2">Categoria</td>
+                  <td class="footer">$ Precio</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="formulario">
+            <h3>Contactanos</h3>
+            <form class="forma-contacto" action="assets/arrow-circle-right-solid.svg">
+              <div class="formulario-item">
+                <label class="label-item-contacto-nombre">
+                  Nombre
+                </label>
+                <input class="item-contacto" type="text" id="item-contacto-texto">
+              </div>
+              <div class="formulario-item">
+                <label class="label-item-contacto-email">
+                  Email
+                </label>
+                <input class="item-contacto" type="email" id="item-contacto-email" required>
+              </div>
+              <div class="formulario-item">
+                <label class="label-item-contacto-comentario">
+                  Comentarios
+                </label>
+                <textarea class="item-contacto" id="item-contacto-tarea" cols="30" rows="5"></textarea>
+              </div>
+
+              <button class="button-item-contacto" id="item-contacto-button">Escribenos!!</button>
+
+            </form>
+          </div>
+        </div>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam provident totam dolores unde maxime nisi,
+          ipsam eos accusantium cupiditate, quis rem quae culpa incidunt ad, a alias vero fuga? Soluta.
+        </p>
+
+      </section>
+    </main>
+    <footer class="container_footer">
+      <div class="contenido_adicional">
+        <div class="audio">
+          <audio controls>
+            <source src="assets/track01.mp3">
+          </audio>
+        </div>
+      </div>
+      <div class="container_end_elements">
+        <div class="container_count">Contador:
+          <small><a href="https://www.contadorvisitasgratis.com" title="contador de paginas web"><img
+                src="https://counter4.stat.ovh/private/contadorvisitasgratis.php?c=yeu3lru1w3h246keaagpmrgza5cjlprs"
+                border="0" title="contador de paginas web" alt="contador de paginas web"></a></small>
+        </div>
+
+        <div class="container_redes">
+          <a href="http://www.youtube.com/" target="_blank"><i class="fab fa-youtube redes"></i></a>
+          <a href="https://www.twitch.tv/" target="_blank"><i class="fab fa-twitch redes"></i></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+
+</html>

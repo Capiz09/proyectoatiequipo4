@@ -1,0 +1,504 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Indie Flower', cursive;
+  color: black;
+}
+body{
+  padding-top: 90px;
+}
+nav{
+  display: flex;
+  position: fixed;
+  height: 60px;
+  width: 100%;
+  top: 0px;
+  align-items: center;
+  background: #f5f5f5;
+  border-bottom: 2px solid #bdbdbd;
+  box-shadow: 0px 1px 10px #555;
+  z-index: 10;
+}
+.forma{
+  display: flex;
+  width: 200px;
+}
+.email,
+.pass{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+.etiqueta{
+  display: none;
+}
+.etiqueta.open{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bolder;
+  width: 200px;
+  height: 60px;
+}
+#solicitar{
+  width: 30px;
+  cursor: pointer;
+  pointer-events: all;
+}
+.login.closed{
+  cursor: none;
+  display: none;
+}
+.nav_links {
+  display: flex;
+  list-style: none;
+  width: 50%;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-left: auto;
+  z-index: 5;
+  a{
+    text-decoration: none;
+  }
+  li{
+    display: flex;
+    height: 100%;
+    width: 13vw;
+    justify-content: space-evenly;
+    align-items: center;
+    color: #999;
+    font-size: 1.1em;
+    font-weight: bolder;
+  }
+  li:hover{
+    background: rgba(0,0,0,0.2);
+    color: rgb(255, 255, 255);
+    transform: scale(1.2);
+  }
+}
+
+
+.home,
+.galeria,
+.proyectos{
+  display: block;
+  min-height: 90vh;
+  height: 90%;
+  width: 100%;
+}
+
+.home-content,
+.proyectos-content{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+}
+
+.home-content h2{
+  display: flex;
+  font-size: 28px;
+  text-align: left;
+}
+
+.videojuegos-content{
+  display: flex;
+  position: relative;
+  width: 400px;
+  height: 500px;
+  margin-bottom: 40px;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+#mostrar-juego{
+  display: flex;
+  position: absolute;
+  right: -18px;
+  top: 55px;
+  width: 120px;
+  height: 40px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  padding: 6px;
+  border-radius: 7px;
+  box-shadow: 2px 2px 20px #bbbbbb;
+  color: #fff;
+  background: rgb(0, 0, 0);
+  opacity: 0.3;
+  transition: all 0.3s ease-in-out;
+}
+#mostrar-juego:hover{
+opacity: 0.5;
+background: #fff;
+color: #999;
+box-shadow: 2px 2px 16px rgba(0, 0, 218, 0.473);
+cursor: pointer;
+}
+.tabla{
+  width: 100%;
+  text-align: center;
+  font-size: 22px;
+}
+thead{
+  background: darkblue;
+  th{
+    height: 50px;
+    color: white;
+    border-radius: 10px;
+  }
+}
+tbody{
+  height: 400px;
+  .footer{
+    border: 0.5px solid #555;
+    border-radius: 10px;
+  }
+  #respImagen{
+      height: 400px;
+      overflow: hidden;
+      img{
+        width: 100%;
+        height: 90%;
+object-fit: contain;
+      }
+  }
+}
+
+.home{
+  background-image: linear-gradient(to top, #c3cff0 0%, #ffffff 75%);
+}
+.galeria{
+  background-image: linear-gradient(to top, #d2f0e5 0%, #ffffff 75%);
+}
+.proyectos{
+  background-image: linear-gradient(to top, #e7d8f0 0%, #fff 75%);
+
+}
+
+/*
+Trabajando la página principal
+*/
+.titular{
+  display: flex;
+  margin: 50px auto;
+  width: 90%;
+  height: 4em;
+  align-items: center;
+ h2{
+   display: block;
+   margin-left: 20vw;
+ }
+}
+
+.blink{
+  display: flex;
+  height: 25px;
+  width: 10px;
+  background: black;
+  animation: parpadeo 250ms ease-in-out infinite alternate;
+}
+
+.formulario{
+  display: flex;
+  height: 500px;
+  width: 400px;
+  flex-direction: column;
+  h3{
+    text-align: center;
+    font-size: 25px;
+  }
+}
+.formulario-item{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.label-item-contacto-nombre,
+.label-item-contacto-email,
+.label-item-contacto-comentario{
+  font-size: 0.6em;
+  color: rgba(0, 0, 36, 0.527);
+  transform: translate(10px, 17px);
+  transition: all 0.5s ease-in-out;
+  pointer-events: none;
+}
+
+.label-item-contacto-nombre.open,
+.label-item-contacto-email.open,
+.label-item-contacto-comentario.open{
+  font-size: 1em;
+  font-weight: bold;
+  color: rgb(0, 0, 109);
+  transform: translate(10px, 0px);
+}
+
+.letrero{
+  min-height: 1.5em;
+}
+
+.letrero::after{
+  content: '';
+}
+
+@keyframes parpadeo {
+  0% {opacity: 1;}
+  100% {opacity: 0;}
+}
+
+.container_footer{
+  display: flex;
+  position: relative;
+  height: 70px;
+  bottom: 0;
+  justify-content: space-evenly;
+  div{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.container_redes i{
+  color: darkblue;
+  font-size: x-large;
+  margin: 0px 5px ;
+}
+
+/*
+  * Iniciando el bloque de content .galeria
+*/
+
+.contenedor_imagenes{
+  width: 90%;
+  height: 70vh;
+  margin: 3vh auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.carrusel_imagenes{
+  display: flex;
+  width: 100%;
+}
+
+.picture{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+} 
+.picture img{
+  opacity: 0.8;
+  transition: all 0.5s ease-in-out;;
+}
+.picture img:hover{
+  opacity: 1;
+}
+
+.fotos{
+  display: flex;
+  width: 100%;
+  // color: rgb(94, 77, 255);
+  font-weight: bolder;
+  font-style: italic;
+  font-size: 22px;
+  text-decoration: none;
+  pointer-events: all;
+
+}
+
+/* 
+  * Inicio de bloque de flechas
+  * de navegación del contenedor
+  * de imagenes pagina galeria.
+*/
+
+.btnNext,
+.btnBack{
+position: absolute;
+width: 5%;
+height: 100%;
+background: #fff;
+opacity: 0.2;
+display: flex;
+z-index: 4;
+justify-content: space-around;
+cursor: pointer;
+}
+
+.btnNext{
+  left: 95%;
+} 
+
+.btnBack{
+  left: 0%;
+}
+
+.btnBack i,
+.btnNext i{
+  display: flex;
+  align-items: center;
+  font-size: 3vw;
+}
+
+.btnBack:hover{
+  opacity: 0.6;
+  width: 8%;
+}
+.btnNext:hover{
+  opacity: 0.6;
+  width: 8%;
+  left: 92%;
+}
+
+@media screen and (max-width: 890px){
+
+  
+  .home-content,
+  .proyectos-content{
+    flex-direction: column;
+    img{
+      width: 50%;
+    }
+  }
+
+  /*
+   * bloque de @media screen
+   * para content galeria
+   * en resolucion 768px
+  */
+  
+  
+  /*
+   * bloque de @media screen
+   * para content videos
+   * en resolucion 768px
+  */
+
+  #player{
+    width: 480px;
+    height: 270px;
+  }
+
+}
+
+@media screen and (max-width: 590px ){
+  .line{
+    width: 25px;
+    height: 4px;
+    background: rgb(199, 199, 199);
+    margin: 4px 0px;
+  }
+
+  .container_menu{
+    position: absolute;
+    cursor: pointer;
+    right: 13px;
+    top: 0;
+    z-index: 11;
+  }
+  
+  .nav_links{
+    position: fixed;
+    background: rgb(116, 143, 218);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 150vw;
+    flex-direction: column;
+    transition: all 0.5s;
+    pointer-events: none;
+    li{
+      font-size: 1.5em;
+      color: #fff;
+      height: 140px;
+      width: 200px;
+    }
+  }
+
+  .nav_links.open{
+    transform: translate(-150%);
+    transition: ease-in-out 0.5s;
+    pointer-events: all;
+  }
+  .container_footer{
+    bottom: -70px;
+  }
+  .contenido_adicional{
+    position: absolute;
+    bottom: 70px;
+  }
+
+  .home-content,
+  .proyectos-content{
+    flex-direction: column;
+    img{
+      width: 100%;
+    }
+  }
+.home-content h2{
+  font-size: 20px;
+}
+.titular{
+  padding-left: 10px;
+}
+  .videojuegos-content{
+    width: 300px;
+    height: 400px;
+    margin-bottom: 20px;
+  }
+  #mostrar-juego{
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    padding: 2px;
+    border-radius: 5px;
+  }
+  .tabla{
+    width: 100%;
+    text-align: center;
+    font-size: 17px;
+  }
+  tbody{
+    height: 300px;
+    #respImagen{
+        height: 300px;
+        overflow: hidden;
+        img{
+          width: 100%;
+          height: 90%;
+  object-fit: contain;
+        }
+    }
+  }
+
+  .formulario{
+    height: 400px;
+    width: 300px;
+  }
+  /*
+   * bloque de @media screen
+   * para content galeria
+   * en resolucion 460px
+  */
+  .contenedor_imagenes{
+    width: 100%;
+    // height: 70vh;
+    margin: 5vh auto;
+  }
+
+  .carrusel_imagenes{
+    width: 100%;
+  }  
+
+  #player{
+    width: 320px;
+    height: 180px;
+  }
+}
